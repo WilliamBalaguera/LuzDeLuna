@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEAUTY_WORLD | Tienda de Cosméticos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark">BW</span>
+            <div>
+                <h1>BEAUTY_WORLD</h1>
+                <p>Cosmética premium para tu ritual de belleza</p>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <button id="openCartButton" class="cart-button" aria-label="Abrir carrito">
+                <span>Carrito</span>
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-copy">
+                <h2>Descubre tu nueva rutina de belleza</h2>
+                <p>Productos seleccionados con cuidado, fórmula delicada y un diseño elegante para cada piel.</p>
+            </div>
+            <div class="hero-visual"></div>
+        </section>
+
+        <section class="catalog-section" id="catalog">
+            <div class="section-header">
+                <h2>Catálogo</h2>
+                <p>Elige tus favoritos y agrégalos al carrito con un solo clic.</p>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=500&q=80" alt="Sérum luminoso" />
+                    <div class="card-body">
+                        <h3>Sérum Luminoso</h3>
+                        <p>Fórmula hidratante y ligera para piel radiante.</p>
+                        <span class="price">$29.99</span>
+                        <button class="buy-button" data-name="Sérum Luminoso">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=500&q=80" alt="Paleta de sombras" />
+                    <div class="card-body">
+                        <h3>Paleta de Sombras</h3>
+                        <p>12 tonos mate y brillantes para un look impecable.</p>
+                        <span class="price">$39.99</span>
+                        <button class="buy-button" data-name="Paleta de Sombras">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=500&q=80" alt="Labial de larga duración" />
+                    <div class="card-body">
+                        <h3>Labial Matte</h3>
+                        <p>Color intenso que dura todo el día sin resecar.</p>
+                        <span class="price">$19.99</span>
+                        <button class="buy-button" data-name="Labial Matte">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1589307000224-1f7a5c9685c4?auto=format&fit=crop&w=500&q=80" alt="Crema facial premium" />
+                    <div class="card-body">
+                        <h3>Crema Facial</h3>
+                        <p>Nutre y revitaliza la piel durante la noche.</p>
+                        <span class="price">$34.50</span>
+                        <button class="buy-button" data-name="Crema Facial">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=500&q=80" alt="Aceite corporal" />
+                    <div class="card-body">
+                        <h3>Aceite Corporal</h3>
+                        <p>Textura sedosa con aroma floral para el cuidado diario.</p>
+                        <span class="price">$25.00</span>
+                        <button class="buy-button" data-name="Aceite Corporal">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Kit de cuidado" />
+                    <div class="card-body">
+                        <h3>Kit de Cuidado</h3>
+                        <p>Selección de esenciales para una piel perfecta.</p>
+                        <span class="price">$49.99</span>
+                        <button class="buy-button" data-name="Kit de Cuidado">Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <p>Déjanos tus datos y te ayudamos a elegir la mejor rutina.</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <label>
+                    Nombre completo
+                    <input type="text" name="name" placeholder="Tu nombre" required />
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+                </label>
+                <button type="submit" class="secondary-button">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <aside class="cart-modal" id="cartModal" aria-hidden="true">
+        <div class="cart-panel">
+            <button id="closeCartButton" class="close-button" aria-label="Cerrar carrito">×</button>
+            <h2>Tu carrito</h2>
+            <div id="cartItems" class="cart-items">
+                <p class="empty-state">Tu carrito está vacío.</p>
+            </div>
+
+            <form id="paymentForm" class="payment-form">
+                <h3>Finalizar pago</h3>
+                <label>
+                    Nombre
+                    <input type="text" name="name" placeholder="Nombre" required />
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" placeholder="Email" required />
+                </label>
+                <label>
+                    Método de pago
+                    <select name="paymentMethod" required>
+                        <option value="credit">Tarjeta de crédito</option>
+                        <option value="debit">Tarjeta de débito</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </label>
+                <button type="submit" class="primary-button">Procesar pago</button>
+            </form>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
